@@ -32,18 +32,33 @@ typedef void (^MKHPBUISVOnDidScrollToTop)(UIScrollView* scrollView);
 
 @property (weak, nonatomic) id<UIScrollViewDelegate> originalDelegate;
 
-@property(copy, nonatomic) MKHPBUISVOnDidScroll onDidScroll;
-@property(copy, nonatomic) MKHPBUISVOnDidZoom onDidZoom;
-@property(copy, nonatomic) MKHPBUISVOnWillBeginDragging onWillBeginDragging;
-@property(copy, nonatomic) MKHPBUISVOnWillEndDragging onWillEndDragging;
-@property(copy, nonatomic) MKHPBUISVOnDidEndDragging onDidEndDragging;
-@property(copy, nonatomic) MKHPBUISVOnWillBeginDecelerating onWillBeginDecelerating;
-@property(copy, nonatomic) MKHPBUISVOnDidEndDecelerating onDidEndDecelerating;
-@property(copy, nonatomic) MKHPBUISVOnDidEndScrollingAnimation onDidEndScrollingAnimation;
-@property(copy, nonatomic) MKHPBUISVOnViewForZoomingInScrollView onViewForZoomingInScrollView;
-@property(copy, nonatomic) MKHPBUISVOnWillBeginZooming onWillBeginZooming;
-@property(copy, nonatomic) MKHPBUISVOnDidEndZooming onDidEndZooming;
-@property(copy, nonatomic) MKHPBUISVOnShouldScrollToTop onShouldScrollToTop;
-@property(copy, nonatomic) MKHPBUISVOnDidScrollToTop onDidScrollToTop;
+@property (copy, nonatomic) MKHPBUISVOnDidScroll onDidScroll;
+@property (copy, nonatomic) MKHPBUISVOnDidZoom onDidZoom;
+@property (copy, nonatomic) MKHPBUISVOnWillBeginDragging onWillBeginDragging;
+@property (copy, nonatomic) MKHPBUISVOnWillEndDragging onWillEndDragging;
+@property (copy, nonatomic) MKHPBUISVOnDidEndDragging onDidEndDragging;
+@property (copy, nonatomic) MKHPBUISVOnWillBeginDecelerating onWillBeginDecelerating;
+@property (copy, nonatomic) MKHPBUISVOnDidEndDecelerating onDidEndDecelerating;
+@property (copy, nonatomic) MKHPBUISVOnDidEndScrollingAnimation onDidEndScrollingAnimation;
+@property (copy, nonatomic) MKHPBUISVOnViewForZoomingInScrollView onViewForZoomingInScrollView;
+@property (copy, nonatomic) MKHPBUISVOnWillBeginZooming onWillBeginZooming;
+@property (copy, nonatomic) MKHPBUISVOnDidEndZooming onDidEndZooming;
+@property (copy, nonatomic) MKHPBUISVOnShouldScrollToTop onShouldScrollToTop;
+@property (copy, nonatomic) MKHPBUISVOnDidScrollToTop onDidScrollToTop;
+
+// for Xcode autocomplete support:
+- (void)setOnDidScroll:(MKHPBUISVOnDidScroll)onDidScroll;
+- (void)setOnDidZoom:(MKHPBUISVOnDidZoom)onDidZoom;
+- (void)setOnWillBeginDragging:(MKHPBUISVOnWillBeginDragging)onWillBeginDragging;
+- (void)setOnWillEndDragging:(MKHPBUISVOnWillEndDragging)onWillEndDragging;
+- (void)setOnDidEndDragging:(MKHPBUISVOnDidEndDragging)onDidEndDragging;
+- (void)setOnWillBeginDecelerating:(MKHPBUISVOnWillBeginDecelerating)onWillBeginDecelerating;
+- (void)setOnDidEndDecelerating:(MKHPBUISVOnDidEndDecelerating)onDidEndDecelerating;
+- (void)setOnDidEndScrollingAnimation:(MKHPBUISVOnDidEndScrollingAnimation)onDidEndScrollingAnimation;
+- (void)setOnViewForZoomingInScrollView:(MKHPBUISVOnViewForZoomingInScrollView)onViewForZoomingInScrollView;
+- (void)setOnWillBeginZooming:(MKHPBUISVOnWillBeginZooming)onWillBeginZooming;
+- (void)setOnDidEndZooming:(MKHPBUISVOnDidEndZooming)onDidEndZooming;
+- (void)setOnShouldScrollToTop:(MKHPBUISVOnShouldScrollToTop)onShouldScrollToTop;
+- (void)setOnDidScrollToTop:(MKHPBUISVOnDidScrollToTop)onDidScrollToTop;
 
 @end

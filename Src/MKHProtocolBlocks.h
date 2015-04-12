@@ -10,5 +10,6 @@
 #define MKHProtocolBlocks_MKHProtocolBlocks_h
 
 #import "UIScrollView+MKHProtocolBlocks.h"
+#import "UICollectionView+MKHProtocolBlocks.h"
 
 #endif

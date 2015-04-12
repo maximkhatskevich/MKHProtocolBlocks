@@ -281,7 +281,7 @@ static const void *MKHPBUISVOnDidScrollToTopKey = &MKHPBUISVOnDidScrollToTopKey;
     
     //===
     
-    id originalDelegate = self.originalDelegate;
+    id originalDelegate = scrollView.originalDelegate;
     
     if (originalDelegate &&
         [originalDelegate respondsToSelector:@selector(scrollViewDidScroll:)])
@@ -301,7 +301,7 @@ static const void *MKHPBUISVOnDidScrollToTopKey = &MKHPBUISVOnDidScrollToTopKey;
     
     //===
     
-    id originalDelegate = self.originalDelegate;
+    id originalDelegate = scrollView.originalDelegate;
     
     if (originalDelegate &&
         [originalDelegate respondsToSelector:@selector(scrollViewDidZoom:)])
@@ -321,7 +321,7 @@ static const void *MKHPBUISVOnDidScrollToTopKey = &MKHPBUISVOnDidScrollToTopKey;
     
     //===
     
-    id originalDelegate = self.originalDelegate;
+    id originalDelegate = scrollView.originalDelegate;
     
     if (originalDelegate &&
         [originalDelegate respondsToSelector:@selector(scrollViewWillBeginDragging:)])
@@ -343,7 +343,7 @@ static const void *MKHPBUISVOnDidScrollToTopKey = &MKHPBUISVOnDidScrollToTopKey;
     
     //===
     
-    id originalDelegate = self.originalDelegate;
+    id originalDelegate = scrollView.originalDelegate;
     
     if (originalDelegate &&
         [originalDelegate respondsToSelector:
@@ -367,7 +367,7 @@ static const void *MKHPBUISVOnDidScrollToTopKey = &MKHPBUISVOnDidScrollToTopKey;
     
     //===
     
-    id originalDelegate = self.originalDelegate;
+    id originalDelegate = scrollView.originalDelegate;
     
     if (originalDelegate &&
         [originalDelegate respondsToSelector:
@@ -390,7 +390,7 @@ static const void *MKHPBUISVOnDidScrollToTopKey = &MKHPBUISVOnDidScrollToTopKey;
     
     //===
     
-    id originalDelegate = self.originalDelegate;
+    id originalDelegate = scrollView.originalDelegate;
     
     if (originalDelegate &&
         [originalDelegate respondsToSelector:@selector(scrollViewWillBeginDecelerating:)])
@@ -410,7 +410,7 @@ static const void *MKHPBUISVOnDidScrollToTopKey = &MKHPBUISVOnDidScrollToTopKey;
     
     //===
     
-    id originalDelegate = self.originalDelegate;
+    id originalDelegate = scrollView.originalDelegate;
     
     if (originalDelegate &&
         [originalDelegate respondsToSelector:@selector(scrollViewDidEndDecelerating:)])
@@ -430,7 +430,7 @@ static const void *MKHPBUISVOnDidScrollToTopKey = &MKHPBUISVOnDidScrollToTopKey;
     
     //===
     
-    id originalDelegate = self.originalDelegate;
+    id originalDelegate = scrollView.originalDelegate;
     
     if (originalDelegate &&
         [originalDelegate respondsToSelector:
@@ -454,7 +454,7 @@ static const void *MKHPBUISVOnDidScrollToTopKey = &MKHPBUISVOnDidScrollToTopKey;
     }
     else
     {
-        id originalDelegate = self.originalDelegate;
+        id originalDelegate = scrollView.originalDelegate;
         
         if (originalDelegate &&
             [originalDelegate respondsToSelector:@selector(viewForZoomingInScrollView:)])
@@ -479,7 +479,7 @@ static const void *MKHPBUISVOnDidScrollToTopKey = &MKHPBUISVOnDidScrollToTopKey;
     
     //===
     
-    id originalDelegate = self.originalDelegate;
+    id originalDelegate = scrollView.originalDelegate;
     
     if (originalDelegate &&
         [originalDelegate respondsToSelector:
@@ -502,7 +502,7 @@ static const void *MKHPBUISVOnDidScrollToTopKey = &MKHPBUISVOnDidScrollToTopKey;
     
     //===
     
-    id originalDelegate = self.originalDelegate;
+    id originalDelegate = scrollView.originalDelegate;
     
     if (originalDelegate &&
         [originalDelegate respondsToSelector:
@@ -529,7 +529,7 @@ static const void *MKHPBUISVOnDidScrollToTopKey = &MKHPBUISVOnDidScrollToTopKey;
     }
     else
     {
-        id originalDelegate = self.originalDelegate;
+        id originalDelegate = scrollView.originalDelegate;
         
         if (originalDelegate &&
             [originalDelegate respondsToSelector:@selector(scrollViewShouldScrollToTop:)])
@@ -554,7 +554,7 @@ static const void *MKHPBUISVOnDidScrollToTopKey = &MKHPBUISVOnDidScrollToTopKey;
     
     //===
     
-    id originalDelegate = self.originalDelegate;
+    id originalDelegate = scrollView.originalDelegate;
     
     if (originalDelegate &&
         [originalDelegate respondsToSelector:@selector(scrollViewDidScrollToTop:)])

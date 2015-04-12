@@ -15,6 +15,7 @@
 		504E4B8C1AD9C851007E35BE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 504E4B8A1AD9C851007E35BE /* LaunchScreen.xib */; };
 		504E4B981AD9C851007E35BE /* MKHProtocolBlocksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 504E4B971AD9C851007E35BE /* MKHProtocolBlocksTests.m */; };
 		504E4BA41AD9C8DF007E35BE /* UIScrollView+MKHProtocolBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 504E4BA31AD9C8DF007E35BE /* UIScrollView+MKHProtocolBlocks.m */; };
+		504E4BA81ADAF761007E35BE /* UICollectionView+MKHProtocolBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 504E4BA71ADAF761007E35BE /* UICollectionView+MKHProtocolBlocks.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,8 @@
 		504E4BA21AD9C8DF007E35BE /* UIScrollView+MKHProtocolBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MKHProtocolBlocks.h"; sourceTree = "<group>"; };
 		504E4BA31AD9C8DF007E35BE /* UIScrollView+MKHProtocolBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MKHProtocolBlocks.m"; sourceTree = "<group>"; };
 		504E4BA51AD9C8FD007E35BE /* MKHProtocolBlocks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKHProtocolBlocks.h; sourceTree = "<group>"; };
+		504E4BA61ADAF761007E35BE /* UICollectionView+MKHProtocolBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+MKHProtocolBlocks.h"; sourceTree = "<group>"; };
+		504E4BA71ADAF761007E35BE /* UICollectionView+MKHProtocolBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+MKHProtocolBlocks.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +133,8 @@
 				504E4BA51AD9C8FD007E35BE /* MKHProtocolBlocks.h */,
 				504E4BA21AD9C8DF007E35BE /* UIScrollView+MKHProtocolBlocks.h */,
 				504E4BA31AD9C8DF007E35BE /* UIScrollView+MKHProtocolBlocks.m */,
+				504E4BA61ADAF761007E35BE /* UICollectionView+MKHProtocolBlocks.h */,
+				504E4BA71ADAF761007E35BE /* UICollectionView+MKHProtocolBlocks.m */,
 			);
 			name = Lib;
 			path = ../Src;
@@ -236,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				504E4BA41AD9C8DF007E35BE /* UIScrollView+MKHProtocolBlocks.m in Sources */,
+				504E4BA81ADAF761007E35BE /* UICollectionView+MKHProtocolBlocks.m in Sources */,
 				504E4B841AD9C851007E35BE /* ViewController.m in Sources */,
 				504E4B811AD9C851007E35BE /* AppDelegate.m in Sources */,
 				504E4B7E1AD9C851007E35BE /* main.m in Sources */,
