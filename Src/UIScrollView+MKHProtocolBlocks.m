@@ -73,7 +73,7 @@ static const void *MKHPBUISVOnDidScrollToTopKey = &MKHPBUISVOnDidScrollToTopKey;
     objc_setAssociatedObject(self,
                              MKHPBUISVOnDidScrollKey,
                              handler,
-                             OBJC_ASSOCIATION_COPY);
+                             OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 //===
@@ -89,7 +89,7 @@ static const void *MKHPBUISVOnDidScrollToTopKey = &MKHPBUISVOnDidScrollToTopKey;
     objc_setAssociatedObject(self,
                              MKHPBUISVOnDidZoomKey,
                              handler,
-                             OBJC_ASSOCIATION_COPY);
+                             OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 //===
@@ -105,7 +105,7 @@ static const void *MKHPBUISVOnDidScrollToTopKey = &MKHPBUISVOnDidScrollToTopKey;
     objc_setAssociatedObject(self,
                              MKHPBUISVOnWillBeginDraggingKey,
                              handler,
-                             OBJC_ASSOCIATION_COPY);
+                             OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 //===
@@ -121,7 +121,7 @@ static const void *MKHPBUISVOnDidScrollToTopKey = &MKHPBUISVOnDidScrollToTopKey;
     objc_setAssociatedObject(self,
                              MKHPBUISVOnWillEndDraggingKey,
                              handler,
-                             OBJC_ASSOCIATION_COPY);
+                             OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 //===
@@ -137,7 +137,7 @@ static const void *MKHPBUISVOnDidScrollToTopKey = &MKHPBUISVOnDidScrollToTopKey;
     objc_setAssociatedObject(self,
                              MKHPBUISVOnDidEndDraggingKey,
                              handler,
-                             OBJC_ASSOCIATION_COPY);
+                             OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 //===
@@ -153,7 +153,7 @@ static const void *MKHPBUISVOnDidScrollToTopKey = &MKHPBUISVOnDidScrollToTopKey;
     objc_setAssociatedObject(self,
                              MKHPBUISVOnWillBeginDeceleratingKey,
                              handler,
-                             OBJC_ASSOCIATION_COPY);
+                             OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 //===
@@ -169,7 +169,7 @@ static const void *MKHPBUISVOnDidScrollToTopKey = &MKHPBUISVOnDidScrollToTopKey;
     objc_setAssociatedObject(self,
                              MKHPBUISVOnDidEndDeceleratingKey,
                              handler,
-                             OBJC_ASSOCIATION_COPY);
+                             OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 //===
@@ -185,7 +185,7 @@ static const void *MKHPBUISVOnDidScrollToTopKey = &MKHPBUISVOnDidScrollToTopKey;
     objc_setAssociatedObject(self,
                              MKHPBUISVOnDidEndScrollingAnimationKey,
                              handler,
-                             OBJC_ASSOCIATION_COPY);
+                             OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 //===
@@ -201,7 +201,7 @@ static const void *MKHPBUISVOnDidScrollToTopKey = &MKHPBUISVOnDidScrollToTopKey;
     objc_setAssociatedObject(self,
                              MKHPBUISVOnViewForZoomingInScrollViewKey,
                              handler,
-                             OBJC_ASSOCIATION_COPY);
+                             OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 //===
@@ -217,7 +217,7 @@ static const void *MKHPBUISVOnDidScrollToTopKey = &MKHPBUISVOnDidScrollToTopKey;
     objc_setAssociatedObject(self,
                              MKHPBUISVOnWillBeginZoomingKey,
                              handler,
-                             OBJC_ASSOCIATION_COPY);
+                             OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 //===
@@ -233,7 +233,7 @@ static const void *MKHPBUISVOnDidScrollToTopKey = &MKHPBUISVOnDidScrollToTopKey;
     objc_setAssociatedObject(self,
                              MKHPBUISVOnDidEndZoomingKey,
                              handler,
-                             OBJC_ASSOCIATION_COPY);
+                             OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 //===
@@ -249,7 +249,7 @@ static const void *MKHPBUISVOnDidScrollToTopKey = &MKHPBUISVOnDidScrollToTopKey;
     objc_setAssociatedObject(self,
                              MKHPBUISVOnShouldScrollToTopKey,
                              handler,
-                             OBJC_ASSOCIATION_COPY);
+                             OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 //===
@@ -265,7 +265,7 @@ static const void *MKHPBUISVOnDidScrollToTopKey = &MKHPBUISVOnDidScrollToTopKey;
     objc_setAssociatedObject(self,
                              MKHPBUISVOnDidScrollToTopKey,
                              handler,
-                             OBJC_ASSOCIATION_COPY);
+                             OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 #pragma mark - UIScrollViewDelegate

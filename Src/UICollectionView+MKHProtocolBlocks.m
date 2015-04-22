@@ -59,7 +59,7 @@ static const void *MKHPBUICVOnDidDeselectItemKey = &MKHPBUICVOnDidDeselectItemKe
     objc_setAssociatedObject(self,
                              MKHPBUICVOnDidSelectItemKey,
                              handler,
-                             OBJC_ASSOCIATION_COPY);
+                             OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 //===
@@ -75,7 +75,7 @@ static const void *MKHPBUICVOnDidDeselectItemKey = &MKHPBUICVOnDidDeselectItemKe
     objc_setAssociatedObject(self,
                              MKHPBUICVOnDidDeselectItemKey,
                              handler,
-                             OBJC_ASSOCIATION_COPY);
+                             OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 #pragma mark - UICollectionViewDelegate
