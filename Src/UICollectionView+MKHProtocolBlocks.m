@@ -7,6 +7,7 @@
 //
 
 #import "UICollectionView+MKHProtocolBlocks.h"
+
 #import <objc/runtime.h>
 
 //===
@@ -88,11 +89,15 @@ static const void *MKHPBUICVOnSizeForItemAtIndexPathKey = &MKHPBUICVOnSizeForIte
 
 - (void)setOnSizeForItemAtIndexPath:(MKHPBUICVOnSizeForItemAtIndexPath)handler
 {
-    [self checkDelegate];
-    objc_setAssociatedObject(self,
-                             MKHPBUICVOnSizeForItemAtIndexPathKey,
-                             handler,
-                             OBJC_ASSOCIATION_COPY_NONATOMIC);
+    if ([self.collectionViewLayout
+         isKindOfClass:UICollectionViewFlowLayout.class])
+    {
+        [self checkDelegate];
+        objc_setAssociatedObject(self,
+                                 MKHPBUICVOnSizeForItemAtIndexPathKey,
+                                 handler,
+                                 OBJC_ASSOCIATION_COPY_NONATOMIC);
+    }
 }
 
 #pragma mark - UICollectionViewDelegate
@@ -143,30 +148,38 @@ static const void *MKHPBUICVOnSizeForItemAtIndexPathKey = &MKHPBUICVOnSizeForIte
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGSize result = ((UICollectionViewFlowLayout *)layout).itemSize;
+    CGSize result = CGSizeZero;
     
     //===
     
-    MKHPBUICVOnSizeForItemAtIndexPath handler = collectionView.onSizeForItemAtIndexPath;
-    
-    if (handler)
+    if ([collectionView.collectionViewLayout
+         isKindOfClass:UICollectionViewFlowLayout.class])
     {
-        result =
-        handler(collectionView, layout, indexPath);
-    }
-    else
-    {
-        id originalDelegate = collectionView.originalDelegate;
+        result = ((UICollectionViewFlowLayout *)layout).itemSize;
         
-        if (originalDelegate &&
-            [originalDelegate respondsToSelector:
-             @selector(collectionView:layout:sizeForItemAtIndexPath:)])
+        //===
+        
+        MKHPBUICVOnSizeForItemAtIndexPath handler = collectionView.onSizeForItemAtIndexPath;
+        
+        if (handler)
         {
             result =
-            [originalDelegate
-             collectionView:collectionView
-             layout:layout
-             sizeForItemAtIndexPath:indexPath];
+            handler(collectionView, layout, indexPath);
+        }
+        else
+        {
+            id originalDelegate = collectionView.originalDelegate;
+            
+            if (originalDelegate &&
+                [originalDelegate respondsToSelector:
+                 @selector(collectionView:layout:sizeForItemAtIndexPath:)])
+            {
+                result =
+                [originalDelegate
+                 collectionView:collectionView
+                 layout:layout
+                 sizeForItemAtIndexPath:indexPath];
+            }
         }
     }
     
