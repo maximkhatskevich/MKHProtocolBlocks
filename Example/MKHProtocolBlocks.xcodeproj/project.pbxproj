@@ -16,6 +16,7 @@
 		504E4B981AD9C851007E35BE /* MKHProtocolBlocksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 504E4B971AD9C851007E35BE /* MKHProtocolBlocksTests.m */; };
 		504E4BA41AD9C8DF007E35BE /* UIScrollView+MKHProtocolBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 504E4BA31AD9C8DF007E35BE /* UIScrollView+MKHProtocolBlocks.m */; };
 		504E4BA81ADAF761007E35BE /* UICollectionView+MKHProtocolBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 504E4BA71ADAF761007E35BE /* UICollectionView+MKHProtocolBlocks.m */; };
+		50B3DCAF1AE9CEE4007DD278 /* UIGestureRecognizer+MKHProtocolBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B3DCAE1AE9CEE4007DD278 /* UIGestureRecognizer+MKHProtocolBlocks.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		504E4BA51AD9C8FD007E35BE /* MKHProtocolBlocks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKHProtocolBlocks.h; sourceTree = "<group>"; };
 		504E4BA61ADAF761007E35BE /* UICollectionView+MKHProtocolBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+MKHProtocolBlocks.h"; sourceTree = "<group>"; };
 		504E4BA71ADAF761007E35BE /* UICollectionView+MKHProtocolBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+MKHProtocolBlocks.m"; sourceTree = "<group>"; };
+		50B3DCAD1AE9CEE4007DD278 /* UIGestureRecognizer+MKHProtocolBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+MKHProtocolBlocks.h"; sourceTree = "<group>"; };
+		50B3DCAE1AE9CEE4007DD278 /* UIGestureRecognizer+MKHProtocolBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+MKHProtocolBlocks.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +138,8 @@
 				504E4BA31AD9C8DF007E35BE /* UIScrollView+MKHProtocolBlocks.m */,
 				504E4BA61ADAF761007E35BE /* UICollectionView+MKHProtocolBlocks.h */,
 				504E4BA71ADAF761007E35BE /* UICollectionView+MKHProtocolBlocks.m */,
+				50B3DCAD1AE9CEE4007DD278 /* UIGestureRecognizer+MKHProtocolBlocks.h */,
+				50B3DCAE1AE9CEE4007DD278 /* UIGestureRecognizer+MKHProtocolBlocks.m */,
 			);
 			name = Lib;
 			path = ../Src;
@@ -242,6 +247,7 @@
 			files = (
 				504E4BA41AD9C8DF007E35BE /* UIScrollView+MKHProtocolBlocks.m in Sources */,
 				504E4BA81ADAF761007E35BE /* UICollectionView+MKHProtocolBlocks.m in Sources */,
+				50B3DCAF1AE9CEE4007DD278 /* UIGestureRecognizer+MKHProtocolBlocks.m in Sources */,
 				504E4B841AD9C851007E35BE /* ViewController.m in Sources */,
 				504E4B811AD9C851007E35BE /* AppDelegate.m in Sources */,
 				504E4B7E1AD9C851007E35BE /* main.m in Sources */,
@@ -369,6 +375,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MKHProtocolBlocks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -379,6 +386,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MKHProtocolBlocks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

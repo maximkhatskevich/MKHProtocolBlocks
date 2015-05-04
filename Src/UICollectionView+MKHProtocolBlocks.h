@@ -11,8 +11,12 @@
 
 //===
 
-typedef void (^MKHPBUICVOnDidSelectItem)(UICollectionView* collectionView, NSIndexPath *indexPath);
-typedef void (^MKHPBUICVOnDidDeselectItem)(UICollectionView* collectionView, NSIndexPath *indexPath);
+typedef void (^MKHPBUICVOnDidSelectItem)(UICollectionView *collectionView, NSIndexPath *indexPath);
+typedef void (^MKHPBUICVOnDidDeselectItem)(UICollectionView *collectionView, NSIndexPath *indexPath);
+
+typedef CGSize (^MKHPBUICVOnSizeForItemAtIndexPath)(UICollectionView *collectionView,
+                                                    UICollectionViewLayout *layout,
+                                                    NSIndexPath *indexPath);
 
 //===
 
@@ -20,11 +24,21 @@ typedef void (^MKHPBUICVOnDidDeselectItem)(UICollectionView* collectionView, NSI
 
 @property (weak, nonatomic) id<UICollectionViewDelegate> originalDelegate;
 
+//=== UICollectionViewDelegate
+
 @property (copy, nonatomic) MKHPBUICVOnDidSelectItem onDidSelectItem;
 @property (copy, nonatomic) MKHPBUICVOnDidDeselectItem onDidDeselectItem;
+
+//=== UICollectionViewDelegateFlowLayout
+
+@property (copy, nonatomic) MKHPBUICVOnSizeForItemAtIndexPath onSizeForItemAtIndexPath;
+
+//===
 
 // for Xcode autocomplete support:
 - (void)setOnDidSelectItem:(MKHPBUICVOnDidSelectItem)onDidSelectItem;
 - (void)setOnDidDeselectItem:(MKHPBUICVOnDidDeselectItem)onDidDeselectItem;
+
+- (void)setOnSizeForItemAtIndexPath:(MKHPBUICVOnSizeForItemAtIndexPath)onSizeForItemAtIndexPath;
 
 @end

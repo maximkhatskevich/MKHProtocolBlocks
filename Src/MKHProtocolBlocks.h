@@ -11,5 +11,6 @@
 
 #import "UIScrollView+MKHProtocolBlocks.h"
 #import "UICollectionView+MKHProtocolBlocks.h"
+//#import "UIGestureRecognizer+MKHProtocolBlocks.h"
 
 #endif

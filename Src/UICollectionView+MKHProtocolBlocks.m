@@ -18,6 +18,7 @@
 
 static const void *MKHPBUICVOnDidSelectItemKey = &MKHPBUICVOnDidSelectItemKey;
 static const void *MKHPBUICVOnDidDeselectItemKey = &MKHPBUICVOnDidDeselectItemKey;
+static const void *MKHPBUICVOnSizeForItemAtIndexPathKey = &MKHPBUICVOnSizeForItemAtIndexPathKey;
 
 //===
 
@@ -36,9 +37,9 @@ static const void *MKHPBUICVOnDidDeselectItemKey = &MKHPBUICVOnDidDeselectItemKe
 
 #pragma mark - Property accessors
 
-- (id<UICollectionViewDelegate>)originalDelegate
+- (delegateType)originalDelegate
 {
-    return (id<UICollectionViewDelegate>)[super originalDelegate];
+    return (delegateType)[super originalDelegate];
 }
 
 - (void)setOriginalDelegate:(id<UICollectionViewDelegate>)originalDelegate
@@ -74,6 +75,22 @@ static const void *MKHPBUICVOnDidDeselectItemKey = &MKHPBUICVOnDidDeselectItemKe
     [self checkDelegate];
     objc_setAssociatedObject(self,
                              MKHPBUICVOnDidDeselectItemKey,
+                             handler,
+                             OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+//===
+
+- (MKHPBUICVOnSizeForItemAtIndexPath)onSizeForItemAtIndexPath
+{
+    return objc_getAssociatedObject(self, MKHPBUICVOnSizeForItemAtIndexPathKey);
+}
+
+- (void)setOnSizeForItemAtIndexPath:(MKHPBUICVOnSizeForItemAtIndexPath)handler
+{
+    [self checkDelegate];
+    objc_setAssociatedObject(self,
+                             MKHPBUICVOnSizeForItemAtIndexPathKey,
                              handler,
                              OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
@@ -120,6 +137,42 @@ static const void *MKHPBUICVOnDidDeselectItemKey = &MKHPBUICVOnDidDeselectItemKe
     {
         [originalDelegate collectionView:collectionView didDeselectItemAtIndexPath:indexPath];
     }
+}
+
+#pragma mark - UICollectionViewDelegateFlowLayout
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGSize result = ((UICollectionViewFlowLayout *)layout).itemSize;
+    
+    //===
+    
+    MKHPBUICVOnSizeForItemAtIndexPath handler = collectionView.onSizeForItemAtIndexPath;
+    
+    if (handler)
+    {
+        result =
+        handler(collectionView, layout, indexPath);
+    }
+    else
+    {
+        id originalDelegate = collectionView.originalDelegate;
+        
+        if (originalDelegate &&
+            [originalDelegate respondsToSelector:
+             @selector(collectionView:layout:sizeForItemAtIndexPath:)])
+        {
+            result =
+            [originalDelegate
+             collectionView:collectionView
+             layout:layout
+             sizeForItemAtIndexPath:indexPath];
+        }
+    }
+    
+    //===
+    
+    return result;
 }
 
 @end

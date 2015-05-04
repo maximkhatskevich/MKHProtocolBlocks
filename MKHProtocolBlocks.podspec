@@ -8,8 +8,8 @@ Pod::Spec.new do |s|
 
   s.author       = { "Maxim Khatskevich" => "maxim.khatskevich@gmail.com" }
 
-  s.ios.deployment_target = "6.0"
-  s.osx.deployment_target = "10.8"
+  s.ios.deployment_target = "7.0"
+  s.osx.deployment_target = "10.9"
 
   s.source       = { :git => "https://github.com/maximkhatskevich/MKHProtocolBlocks.git", :tag => "#{s.version}" }
   
